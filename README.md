@@ -1,6 +1,8 @@
 ----- back story -----
 
 - UTXOs are made up of inputs and outputs (bitcoin network does not track how much balance u have after a txn, it just tracks the inputs vs outputs)
+- note: a txn may have multiple outputs
+- every output can only be used by an input once, anymore than that and it will be considered as double spending - which is forbidden
 
 ------ ordinals ------
 
