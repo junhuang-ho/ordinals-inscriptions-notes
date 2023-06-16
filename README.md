@@ -4,7 +4,9 @@
 - note: a txn may have multiple outputs
 - every output can only be used by an input once, anymore than that and it will be considered as double spending - which is forbidden
 
------- ordinals ------
+---
+
+## ------ ordinals ------
 
 - pre ordinals, every bitcoin/satoshi (sat) are unmarked (indistinguishable from one another)
 - ordinals now "pretends" the set an order of the inputs and outputs of each txn, and pretends to set first sat into txn is first sat out of txn (its like a convention that everyone (or majority) needs to agree upon for it to be "true").
@@ -12,8 +14,11 @@
 - note: the base bitcoin protocol doesn't really care about this "pretend" order and won't throw error with the addition of ordinals
 - note: why do we order sat and not bitcoin? because each bitcoin is just made up of N sats
 
------ inscriptions ------
--- What was the segwit upgrade --
+---
+
+## ----- inscriptions ------
+
+-- What was the segwit upgrade ------------------------
 
 - Prior to segwit, the inputs have all sorts of data attached to it, including data for verifying (signature/proofs) which previous output does this input connect to/unlock
 - These sigs/proofs part of the data pose some limitations
@@ -22,7 +27,7 @@
 - OLD: MAX_BLOCK_BASE_SIZE = 1000000 (~ 1mb)
 - NEW: 4 \* non witness data (in bytes) + witness data (in bytes) < 4 million units
 
--- What was the taproot upgrade --
+-- What was the taproot upgrade ------------------------
 
 - improves privacy, efficiency, and flexibility of bitcoin's scripting capabilities.
 - to do this it allows verification/scripts/proofs (witness data) to be a certain (bigger) size and allows increase complexity
